@@ -5,3 +5,8 @@ const last4Digits = cardNumber.slice(-4);
 // However, the code isn't working
 // Make and explain a prediction about why the code won't work
 // Then try updating the expression last4Digits is assigned to, in order to get the correct value
+
+// ANSWER //
+
+const last4Digits = String(cardNumber).slice(-4); // Convert to string and then slice
+console.log(last4Digits); // Output: "4213"
