@@ -23,14 +23,17 @@
 // Then the function should return "Reflex angle"
 
 function getAngleType(angleInput) {
-  if (angleInput === 90) {
-    return "Right angle";
-  } else if (angleInput < 90) {
+  const angleTypes = {
+    90: "Right angle",
+    180: "Straight angle",
+  };
+
+  if (angleInput in angleTypes) {
+    return angleTypes[angleInput];
+  } else if (angleInput < 90 && angleInput >= 0) {
     return "Acute angle";
   } else if (angleInput > 90 && angleInput < 180) {
     return "Obtuse angle";
-  } else if (angleInput === 180) {
-    return "Straight angle";
   } else if (angleInput > 180 && angleInput < 360) {
     return "Reflex angle";
   } else {
