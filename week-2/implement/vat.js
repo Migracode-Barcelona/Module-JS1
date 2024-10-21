@@ -8,3 +8,15 @@
 // Given a number,
 // When I call this function with a number
 // Then it returns the new price with VAT added on
+
+function calculateVAT(price) {
+  // Calculate the price with 20% VAT
+  const priceWithVAT = price * 1.2;
+
+  // Return rounded to 2 decimal places
+  return Math.round(priceWithVAT * 100) / 100;
+}
+
+// Calling
+console.log(`The price with VAT for £50 is £${calculateVAT(50)}`);
+console.log(`The price with VAT for £75 is £${calculateVAT(75)}`);
