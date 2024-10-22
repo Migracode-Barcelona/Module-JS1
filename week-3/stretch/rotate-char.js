@@ -32,6 +32,7 @@ console.log(rotateCharacter("F", 1)); // Output: "G"
 // Then it should return the character unchanged.
 // This specification outlines the behavior of the rotateCharacter function for different input scenarios, including valid and invalid characters, and defines the expected output or action for each case.
 console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
+console.log(rotateCharacter(7, 5)); // Output: "7" (unchanged, not a letter)
 
 // Scenario: Shifting a Character with Wraparound
 // Given a character char within the lowercase alphabet range (e.g., 'z') or the uppercase alphabet range (e.g., 'Z'),
@@ -40,3 +41,29 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // Then it should correctly rotate the character by shift positions within the alphabet while handling the wraparound,
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
 console.log(rotateCharacter("z", 1)); // Output: "a" (unchanged, not a letter)
+
+function rotateCharacter(character, shiftAmount) {
+  const isLowercase = character >= "a" && character <= "z";
+  const isUppercase = character >= "A" && character <= "Z";
+
+  // Rotate if the character is lowercase
+  if (isLowercase) {
+    const lowercaseStart = "a".charCodeAt(0);
+    const rotatedCode =
+      ((character.charCodeAt(0) - lowercaseStart + shiftAmount) % 26) +
+      lowercaseStart;
+    return String.fromCharCode(rotatedCode);
+  }
+
+  // Rotate if the character is uppercase
+  if (isUppercase) {
+    const uppercaseStart = "A".charCodeAt(0);
+    const rotatedCode =
+      ((character.charCodeAt(0) - uppercaseStart + shiftAmount) % 26) +
+      uppercaseStart;
+    return String.fromCharCode(rotatedCode);
+  }
+
+  // Return non-alphabetic characters unchanged
+  return character;
+}
