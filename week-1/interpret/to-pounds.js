@@ -3,17 +3,17 @@ const penceString = "399p";
 const penceStringWithoutTrailingP = penceString.substring(
   0,
   penceString.length - 1
-);
+); // 399
 
-const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0");
+const paddedPenceNumberString = penceStringWithoutTrailingP.padStart(3, "0"); // 399
 const pounds = paddedPenceNumberString.substring(
   0,
   paddedPenceNumberString.length - 2
-);
+); // 3
 
 const pence = paddedPenceNumberString
   .substring(paddedPenceNumberString.length - 2)
-  .padEnd(2, "0");
+  .padEnd(2, "0"); // 99
 
 console.log(`£${pounds}.${pence}`);
 
@@ -27,3 +27,7 @@ console.log(`£${pounds}.${pence}`);
 // To begin, we can start with
 
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 2. const penceStringWithoutTrailingP penceString.substring(0, penceString.length - 1): returns numeric part of value
+// 3. const paddedPenceNumberString  = penceStringWithoutTrailingP.padStart(3, "0"): adds "0" before given value for the length of 3 digits
+// 4. const pounds = paddedPenceNumberString.substring(0, paddedPenceNumberString.length - 2): returns the part of string between begin and 1 digit - "3"
+// 5. const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0"): gets the first digit of number and adds "00" at the end
