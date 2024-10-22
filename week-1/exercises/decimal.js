@@ -1,5 +1,11 @@
-
 const num = 56.5467;
+const wholeNumberPart = Math.floor(num);
+const decimalPart = (num - Math.floor(num)).toFixed(4);
+const roundedNum = Math.round(num);
+
+console.log(wholeNumberPart);
+console.log(decimalPart);
+console.log(roundedNum);
 
 // You should look up Math functions for this exercise https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
