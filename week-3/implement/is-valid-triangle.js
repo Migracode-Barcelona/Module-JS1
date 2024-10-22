@@ -38,3 +38,45 @@
 // Then it should return true because the input forms a valid triangle.
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+
+function isValidTriangle(a, b, c) {
+  // Checking if greater than zero
+  if (a <= 0 || b <= 0 || c <= 0) {
+    return false; // Invalid triangle if any side is zero or negative
+  }
+
+  // The sum of any two sides must be greater than the third side
+  if (a + b > c && a + c > b && b + c > a) {
+    return true; // Valid triangle
+  }
+
+  return false; // Invalid triangle if any of above condition fails
+}
+
+// Tests
+// All sides equal
+console.log(isValidTriangle(3, 3, 3)); // true (all sides equal, valid triangle)
+
+// Valid triangle
+console.log(isValidTriangle(3, 4, 5)); // true (valid right triangle)
+
+// When the sum of any two side lengths is less than or equal to the length of the third side (i.e., a + b <= c, a + c <= b, b + c <= a)
+console.log(isValidTriangle(1, 2, 3)); // false (1 + 2 = 3, not greater than 3)
+
+// When any of the sides are less than or equal to zero
+console.log(isValidTriangle(0, 4, 5)); // false
+
+// When one side length is negative
+console.log(isValidTriangle(3, -4, 5)); // false (side length cannot be negative)
+
+// When sum of two sides less than the third
+console.log(isValidTriangle(2, 3, 6)); // false (2 + 3 is not greater than 6)
+
+// Given valid side lengths where the sum of any two sides is greater than the third side
+console.log(isValidTriangle(7, 10, 5)); // true (valid triangle)
+
+// Right triangle
+console.log(isValidTriangle(5, 12, 13)); // true (5, 12, 13 is a valid right triangle)
+
+// When one side length too long
+console.log(isValidTriangle(8, 5, 20)); // false (8 + 5 is not greater than 20)
