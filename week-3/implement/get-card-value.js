@@ -65,6 +65,8 @@ function getCardValue(card) {
   throw new Error("Invalid card rank");
 }
 
+module.exports = { getCardValue };
+
 // Test Cases
 try {
   // Handle Number Cards (2-10):

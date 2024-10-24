@@ -53,6 +53,8 @@ function isValidTriangle(a, b, c) {
   return false; // Invalid triangle if any of above condition fails
 }
 
+module.exports = { isValidTriangle };
+
 // Tests
 // All sides equal
 console.log(isValidTriangle(3, 3, 3)); // true (all sides equal, valid triangle)

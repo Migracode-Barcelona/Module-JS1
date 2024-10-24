@@ -30,7 +30,7 @@ function getAngleType(angleInput) {
 
   if (angleInput in angleTypes) {
     return angleTypes[angleInput];
-  } else if (angleInput < 90 && angleInput >= 0) {
+  } else if (angleInput < 90 && angleInput >= 5) {
     return "Acute angle";
   } else if (angleInput > 90 && angleInput < 180) {
     return "Obtuse angle";
@@ -40,6 +40,9 @@ function getAngleType(angleInput) {
     return "Wrong angle value!";
   }
 }
+
+module.exports = { getAngleType };
+
 // Right Angle
 console.log(getAngleType(90));
 

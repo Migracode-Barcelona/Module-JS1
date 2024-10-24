@@ -44,6 +44,8 @@ function isProperFraction(numerator, denominator) {
   return Math.abs(numerator) < Math.abs(denominator);
 }
 
+module.exports = { isProperFraction };
+
 // Tests
 // Proper Fraction check: (numerator < denominator)
 console.log(isProperFraction(2, 3)); // Expected output: true (2/3 is proper)
