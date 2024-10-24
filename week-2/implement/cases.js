@@ -15,3 +15,10 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+
+function changeToUpperCase(str) {
+  return str.replaceAll(" ", "_").toUpperCase();
+}
+console.log(changeToUpperCase("lord of the rings"));
+console.log(changeToUpperCase("the great gatsby"));
+console.log(changeToUpperCase("the da vinci code"));
