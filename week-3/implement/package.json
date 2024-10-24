@@ -1,0 +1,10 @@
+{
+  "name": "week-3-tests",
+  "description": "Tests using jest framework for week 3 implementations",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

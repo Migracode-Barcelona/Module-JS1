@@ -33,3 +33,43 @@
 // Explanation: The fraction 3/3 is not a proper fraction because the numerator is equal to the denominator. The function should return false.
 
 // These acceptance criteria cover a range of scenarios to ensure that the isProperFraction function handles both proper and improper fractions correctly and handles potential errors such as a zero denominator.
+
+function isProperFraction(numerator, denominator) {
+  // Check for zero denominator, as it's not a valid fraction
+  if (denominator === 0) {
+    throw new Error("Denominator cannot be zero");
+  }
+
+  // Check if it's a proper fraction (absolute value of numerator < denominator)
+  return Math.abs(numerator) < Math.abs(denominator);
+}
+
+module.exports = { isProperFraction };
+
+// Tests
+// Proper Fraction check: (numerator < denominator)
+console.log(isProperFraction(2, 3)); // Expected output: true (2/3 is proper)
+
+// Improper Fraction check: (numerator > denominator)
+console.log(isProperFraction(5, 2)); // Expected output: false (5/2 is improper)
+
+// Zero Denominator check:
+try {
+  console.log(isProperFraction(3, 0)); // Should throw an error
+} catch (e) {
+  console.log("Caught error:", e.message); // Expected output: "Denominator cannot be zero"
+}
+
+// Negative Fraction check:
+console.log(isProperFraction(-4, 7)); // Expected output: true (-4/7 is proper)
+
+// Equal Numerator and Denominator check:
+console.log(isProperFraction(3, 3)); // Expected output: false (3/3 is improper)
+
+// Additional Test: Negative improper fraction
+console.log(isProperFraction(-5, 4)); // Expected output: false (-5/4 is improper)
+
+// Additional Test: Positive improper fraction with larger numerator
+console.log(isProperFraction(6, 3)); // Expected output: false (6/3 is improper)
+
+console.log("All tests completed.");
