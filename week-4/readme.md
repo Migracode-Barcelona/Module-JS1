@@ -14,6 +14,9 @@ Your first task is to rewrite the assertions from `week-3/implement` using Jest 
 You will also need to update the filenames in `week-3/implement` so they have a `.test.js` extension and _not_ just a `.js` extension.
 Keep running `npm test` to check the new tests you've created.
 
+### Completed !!!
+https://github.com/UmairRiazDev/Module-JS1/tree/week-3/week-3/implement
+
 ## 🔍 Investigate
 
 In this exercise, you'll need to **play computer** with the function `find`. This function makes use of a while loop statement. Your task will be to step through the code to figure out what is happening when the computer executes the code.
