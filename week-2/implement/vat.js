@@ -8,3 +8,12 @@
 // Given a number,
 // When I call this function with a number
 // Then it returns the new price with VAT added on
+
+function vatPrice(price) {
+  const totalVatInclusivePrice = price * 1.2;
+  return totalVatInclusivePrice;
+}
+console.log("Total Price for 50£", vatPrice(50).toFixed(2));
+console.log("Total Price for 100£", vatPrice(100).toFixed(2));
+console.log("Total Price for 200£", vatPrice(200).toFixed(2));
+console.log("Total Price for 300£", vatPrice(300).toFixed(2));
