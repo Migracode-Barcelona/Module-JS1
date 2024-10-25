@@ -18,6 +18,7 @@ function formatTimeDisplay(seconds) {
 }
 
 console.log(formatTimeDisplay(143));
+console.log(pad);
 
 // You can play computer with this example
 // Use the Python Visualiser https://pythontutor.com/visualize.html#mode=edit
@@ -26,18 +27,27 @@ console.log(formatTimeDisplay(143));
 // Questions
 
 // a) When formatTimeDisplay is called how many times will pad be called?
+// Three times
 
 // Call formatTimeDisplay with an input of 143, now answer the following:
 
 // b) What value is assigned to the parameter num when pad is called for the first time?
+// 0
 
 // c) What is the return value of pad when it is called for the first time?
+//00
 
 // d) What is the value assigned to the parameter num when pad
 // is called for the last time in this program?  Explain your answer
 
+//23
+
 // e) What is the return value when pad is called
 // for the last time in this program?  Explain your answer
 
+//23
+
 // f) Research an alternative way of padding the numbers in this code.
 // Look up the string functions on mdn
+//padStart(targetLength, padString): Pads the current string with another string (in this case, '0')
+//until the resulting string reaches the given length (2 in this case).
