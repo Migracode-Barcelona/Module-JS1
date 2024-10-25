@@ -8,3 +8,11 @@
 // Given a number,
 // When I call this function with a number
 // Then it returns the new price with VAT added on
+
+function calculateVatInclusivePrice(price) {
+  const vatPercent = 20 / 100;
+  const totalPriceVatInclusive = price + vatPercent * price;
+  return totalPriceVatInclusive;
+}
+
+console.log(calculateVatInclusivePrice(80));

@@ -15,3 +15,11 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+
+function upperCaseWithUnderscore(text) {
+  return text.replaceAll(" ", "_").toUpperCase();
+}
+
+console.log(upperCaseWithUnderscore("lord of the rings"));
+console.log(upperCaseWithUnderscore("the great gatsby"));
+console.log(upperCaseWithUnderscore("the da vinci code"));
