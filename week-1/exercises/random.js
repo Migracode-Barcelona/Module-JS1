@@ -7,5 +7,8 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 //num represent any random number between 1-100  
 
 // Try breaking down the expression and using documentation to explain what it means
+//Math.random  generates a random number but decimal number
+//the line cod3 generally breaks down a random integer between minimun and maximum 
+
 // It will help to think about the order in which expressions are evaluated
 // Try logging the value of num several times to build an idea of what the program is doing
