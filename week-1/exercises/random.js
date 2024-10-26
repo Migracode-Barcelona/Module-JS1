@@ -11,4 +11,10 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 //the line cod3 generally breaks down a random integer between minimun and maximum 
 
 // It will help to think about the order in which expressions are evaluated
+//it will first multiply the range 
+//the generate random decimal 
+//multiply the random decimal by the range
+//use Math.floor to rounddown to the nearest whole Number
+//lastly add minimum 
+
 // Try logging the value of num several times to build an idea of what the program is doing
