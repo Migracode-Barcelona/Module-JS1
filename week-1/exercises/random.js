@@ -18,3 +18,4 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 //lastly add minimum 
 
 // Try logging the value of num several times to build an idea of what the program is doing
+//it shows different randon number each time i logg
