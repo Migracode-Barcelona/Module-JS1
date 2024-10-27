@@ -39,7 +39,7 @@ console.log(formatMovieLength(0)); //  "00:00:00"
 
 // a) How many variable declarations are there in this program?
 
-//6 variable declarations
+//7 variable declarations
 
 // b) How many function calls are there?
 // 1 function call
