@@ -4,6 +4,10 @@
 // interpret the error message and figure out why it's happening, if your prediction was wrong
 
 function capitalise(str) {
-  let str = `${str[0].toUpperCase()}${str.slice(1)}`;
+   str = `${str[0].toUpperCase()}${str.slice(1)}`;
   return str;
 }
+
+console.log(capitalise("Hi"));
+
+/* Declaring str with let inside the function causes a SyntaxError because str has already been declared as a parameter of the function */
