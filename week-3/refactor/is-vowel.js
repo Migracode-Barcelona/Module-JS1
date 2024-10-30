@@ -3,7 +3,7 @@ function isVowel(letter) {
     letter === "a" ||
     letter === "e" ||
     letter === "i" ||
-    letter === "i" ||
+    letter === "k" ||
     letter === "o" ||
     letter === "u"
   );
@@ -40,3 +40,35 @@ console.assert(
   currentOutput3,
   targetOutput3
 );
+
+console.log("case: letter i...");
+const currentOutput4 = isVowel("i");
+const targetOutput4 = true;
+console.assert(
+  currentOutput4 === targetOutput4,
+  "current output: %s, target output: %s",
+  currentOutput4,
+  targetOutput4
+);
+
+console.log("case: letter u...");
+const currentOutput5 = isVowel("u");
+const targetOutput5 = true;
+console.assert(
+  currentOutput5 === targetOutput5,
+  "current output: %s, target output: %s",
+  currentOutput5,
+  targetOutput5
+);
+
+console.log("case: letter o...");
+const currentOutput6 = isVowel("o");
+const targetOutput6 = true;
+console.assert(
+  currentOutput6 === targetOutput6,
+  "current output: %s, target output: %s",
+  currentOutput6,
+  targetOutput6
+);
+
+console.log("All test passed");
