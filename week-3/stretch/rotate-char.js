@@ -6,6 +6,23 @@
 // This function is commonly used for weak text encryption and decryption,
 // where shifting characters by a certain value can obscure their meaning or reveal hidden messages.
 
+function rotateCharacter(character, shift) {
+  const alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const alphabetLower = "abcdefghijklmnopqrstuvwxyz";
+
+  if (alphabetUpper.includes(character)) {
+    const position = alphabetUpper.indexOf(character);
+    const newPosition = (position + shift) % 26;
+    return alphabetUpper[newPosition];
+  } else if (alphabetLower.includes(character)) {
+    const position = alphabetLower.indexOf(character);
+    const newPosition = (position + shift) % 26;
+    return alphabetLower[newPosition];
+  }
+
+  return character;
+}
+
 // Acceptance criteria:
 
 // Given a character (char) and a shift value (shift),
