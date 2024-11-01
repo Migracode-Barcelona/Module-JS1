@@ -38,3 +38,54 @@
 // Then it should return true because the input forms a valid triangle.
 
 // This specification outlines the behavior of the isValidTriangle function for different input scenarios, ensuring it properly checks for invalid side lengths and whether they form a valid triangle according to the Triangle Inequality Theorem.
+
+//--------------------SOLUTION-------------------------------------------
+//where a,b,c denotes the length of each side of a triangle.
+
+//false if  sum of 2 sides is less than 1 side
+//true if sum of 2 sides is greater than  1 side
+//false if any side is <= 0
+
+function isValidTriangle(a, b, c) {
+  if (a + b > c && b + c > a && a + c > b) {
+    return true;
+  } else if (a <= 0 || b <= 0 || c <= 0) {
+    return false;
+  } else if (a + b <= c || b + c <= a || a + c <= b) {
+    return false;
+  } else {
+    return "Error";
+  }
+}
+
+//   sum of 2 sides is less than 1 side
+
+const currentOutput = isValidTriangle(2, 3, 6);
+const targetOutput = false;
+console.assert(currentOutput === targetOutput, currentOutput, targetOutput);
+
+// sum of 2 sides is greater than  1 side
+const currentOutput1 = isValidTriangle(4, 5, 2);
+const targetOutput1 = true;
+console.assert(currentOutput1 === targetOutput1, currentOutput1, targetOutput1);
+
+// if any side is <= 0
+const currentOutput2 = isValidTriangle(0, 3, 3);
+const targetOutput2 = false;
+console.assert(
+  currentOutput2 === targetOutput2,
+
+  currentOutput2,
+  targetOutput2
+);
+
+//if any side is <= 0
+
+const currentOutput3 = isValidTriangle(-1, 4, 7);
+const targetOutput3 = false;
+console.assert(
+  currentOutput3 === targetOutput3,
+
+  currentOutput3,
+  targetOutput3
+);
