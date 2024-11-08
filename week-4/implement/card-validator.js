@@ -1,8 +1,10 @@
 function cardValidation(cardNumber) {
   //To check if the card is exactly 16 and if its not a number
+
   if (cardNumber.length !== 16 || isNaN(cardNumber)) {
     return false;
   }
+
   //To check if the number is a unique number and has at least two different digit
   if (new Set(cardNumber).size === 1) {
     return false;
