@@ -16,13 +16,12 @@
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
 
-function countChar(input, character) {
-  const count = input.split(character).length - 1;
-  return count === 0 ? 0 : count;
-}
+const countChar = require("./count");
 
-const expectedExample1 = 2;
-const expectedExample2 = 2;
+test("To test for multiple occurrences", function () {
+  expect(countChar("Zanzibar zoo", "z")).toBe(2);
+});
 
-console.assert(countChar("Zanzibar zoo", "z") === expectedExample1); // Output: 2
-console.assert(countChar("Goose", "o") === expectedExample2); // Output: 2
+test("To test for No Occurrences", function () {
+  expect(countChar("Apple", "m")).toBe(0);
+});
