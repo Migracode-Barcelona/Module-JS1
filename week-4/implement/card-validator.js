@@ -20,11 +20,6 @@ function cardValidity(cardNumber) {
   //Ternary operator that returns false is the condition below applies
   noRepeatedSingleNumber.size === 1 ? false : true;
 
-  //It targets the last digit of the string and creates a condition for false if it is 0
-  const lastDigit = cardString.charAt(15);
-  if (lastDigit == 0) {
-    return false;
-  }
   //targets the last digit of the card number and checks if it is even
   const lastValueIsAnEvenNumber = parseInt(cardString.charAt(15), 10);
   if (lastValueIsAnEvenNumber % 2 !== 0) {
@@ -57,3 +52,5 @@ function cardValidity(cardNumber) {
     return true;
   }
 }
+
+module.exports = cardValidity;
