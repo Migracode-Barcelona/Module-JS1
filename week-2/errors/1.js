@@ -10,10 +10,9 @@ console.log(decimalNumber);
 // Play computer with the example to work out what is going on
 
 function convertToPercentage(decimalNumber) {
-  const decimalNumber = 0.5;
-  const percentage = `${decimalNumber * 100}%`;
-
-  return percentage;
+    const percentage = `${decimalNumber * 100}%`;
+    return percentage;
 }
 
-console.log(decimalNumber);
+// Call the function and log the result
+console.log(convertToPercentage(0.5)); // Outputs: "50%"
