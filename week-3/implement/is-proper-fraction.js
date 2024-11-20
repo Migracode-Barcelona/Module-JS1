@@ -5,8 +5,6 @@ function isProperFraction(numerator, denominator) {
   return Math.abs(numerator) < Math.abs(denominator);
 }
 
-
-
 // Proper Fraction check
 console.assert(isProperFraction(2, 3) === true, "Test Case 1 Failed");
 
@@ -15,10 +13,13 @@ console.assert(isProperFraction(5, 2) === false, "Test Case 2 Failed");
 
 // Zero Denominator check
 try {
-    isProperFraction(3, 0);
-    console.assert(false, "Test Case 3 Failed");
+  isProperFraction(3, 0);
+  console.assert(false, "Test Case 3 Failed");
 } catch (e) {
-    console.assert(e.message === "Denominator cannot be zero", "Test Case 3 Passed");
+  console.assert(
+    e.message === "Denominator cannot be zero",
+    "Test Case 3 Passed"
+  );
 }
 
 // Negative Fraction check
