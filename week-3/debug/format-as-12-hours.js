@@ -38,4 +38,18 @@ console.assert(
 
 
 // b) Check the assertion output and explain what the bug is
+//Bug: The current implementation does not properly handle the following:
+
+//Times where the minutes (:mm) are non-zero (e.g., "17:42").
+//Times within the 12-hour range (like "08:00") are incorrectly labeled am without checking the context of midnight or noon.
+//Times at the hour of 12 (e.g., "12:00" or "00:00") do not follow 12-hour clock conventions.
+
+
+
+
+
+
+
+
+
 // c) Now fix the bug and re-run all your assertions
