@@ -1,6 +1,16 @@
-// There is an implementation of format-as-12-hours.js in the debug directory
-// Copy that implementation in here, and improve it:
-// That implementation currently uses the expression Number(time.slice(0, 2)) twice
-// Store this expression in a variable and reference it twice in the function in the correct place
+function isLeapYear(year) {
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    return true;
+  }
+  return false;
+}
+function isLeapYear(year) {
+  const divisibleBy4 = year % 4 === 0;
+  const divisibleBy100 = year % 100 === 0;
+  const divisibleBy400 = year % 400 === 0;
 
-// Explain why it makes more sense to store this expression in a variable
+  if ((divisibleBy4 && !divisibleBy100) || divisibleBy400) {
+    return true;
+  }
+  return false;
+}

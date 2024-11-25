@@ -1,23 +1,40 @@
-// Implement a function getAngleType, and tests for each of the acceptance criteria.
+// Test cases
+console.assert(
+  getAngleType(90) === "Right angle",
+  "Test failed: Expected 'Right angle' for input 90"
+);
 
-// Acceptance criteria:
+console.assert(
+  getAngleType(45) === "Acute angle",
+  "Test failed: Expected 'Acute angle' for input 45"
+);
 
-// Identify Right Angles:
-// When the angle is exactly 90 degrees,
-// Then the function should return "Right angle"
+console.assert(
+  getAngleType(135) === "Obtuse angle",
+  "Test failed: Expected 'Obtuse angle' for input 135"
+);
 
-// Identify Acute Angles:
-// When the angle is less than 90 degrees,
-// Then the function should return "Acute angle"
+console.assert(
+  getAngleType(180) === "Straight angle",
+  "Test failed: Expected 'Straight angle' for input 180"
+);
 
-// Identify Obtuse Angles:
-// When the angle is greater than 90 degrees and less than 180 degrees,
-// Then the function should return "Obtuse angle"
+console.assert(
+  getAngleType(270) === "Reflex angle",
+  "Test failed: Expected 'Reflex angle' for input 270"
+);
 
-// Identify Straight Angles:
-// When the angle is exactly 180 degrees,
-// Then the function should return "Straight angle"
+console.assert(
+  getAngleType(0) === "Acute angle",
+  "Test failed: Expected 'Acute angle' for input 0"
+);
 
-// Identify Reflex Angles:
-// When the angle is greater than 180 degrees and less than 360 degrees,
-// Then the function should return "Reflex angle"
+console.assert(
+  getAngleType(360) === "Invalid angle",
+  "Test failed: Expected 'Invalid angle' for input 360"
+);
+
+console.assert(
+  getAngleType(-45) === "Invalid angle",
+  "Test failed: Expected 'Invalid angle' for input -45"
+);
