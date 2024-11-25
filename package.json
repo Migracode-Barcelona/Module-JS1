@@ -1,0 +1,26 @@
+{
+  "name": "module-js1",
+  "version": "1.0.0",
+  "description": "Like learning a musical instrument, programming requires daily practice.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deborah7834/Module-JS1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deborah7834/Module-JS1/issues"
+  },
+  "homepage": "https://github.com/Deborah7834/Module-JS1#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "fast-json-stable-stringify": "^2.1.0"
+  }
+}
