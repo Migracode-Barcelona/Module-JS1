@@ -15,3 +15,18 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+function toUpperSnakeCase(input) {
+    // Step 1: Convert the string to uppercase
+    const upperCaseString = input.toUpperCase();
+
+    // Step 2: Replace spaces with underscores
+    const snakeCaseString = upperCaseString.replace(/ /g, "_");
+
+    // Step 3: Return the result
+    return snakeCaseString;
+}
+
+// Test Cases
+console.log(toUpperSnakeCase("lord of the rings"));   // Expected: "LORD_OF_THE_RINGS"
+console.log(toUpperSnakeCase("the great gatsby"));    // Expected: "THE_GREAT_GATSBY"
+console.log(toUpperSnakeCase("the da vinci code"));   // Expected: "THE_DA_VINCI_CODE"

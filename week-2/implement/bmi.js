@@ -13,3 +13,20 @@
 // Given someone's weight in kg and height in metres
 // When we call this function with the weight and height
 // Then it returns their Body Mass Index to 1 decimal place
+function calculateBMI(weight, height) {
+    // Validate inputs: weight and height must be positive numbers
+    if (weight <= 0 || height <= 0 || isNaN(weight) || isNaN(height)) {
+        throw new Error("Invalid input: Weight and height must be positive numbers.");
+    }
+
+    // Calculate BMI
+    const bmi = weight / (height * height);
+
+    // Return BMI rounded to 1 decimal place
+    return parseFloat(bmi.toFixed(1));
+}
+
+// Example usage
+console.log(calculateBMI(70, 1.73)); // Expected: 23.4
+console.log(calculateBMI(80, 1.8));  // Expected: 24.7
+console.log(calculateBMI(50, 1.6));  // Expected: 19.5
