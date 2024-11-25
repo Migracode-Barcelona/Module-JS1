@@ -1,19 +1,32 @@
-function creditCard(value) {
-  const cardPattern = /^\d{16}$/.test(value);
-  if (!cardPattern) {
-    return "Invalid: Must be 16 digits and all numbers";
-  }
-  const uniqueDigits = new Set(value.split("")).size;
-  if (uniqueDigits < 2) {
-    return "Invalid: Must contain at least two different digits";
-  }
-  if (parseInt(value.slice(-1)) % 2 !== 0) {
-    return "Invalid: Final digit must be even";
-  }
-  const sum = Array.from(value).reduce((a, b) => a + parseInt(b), 0);
-  if (sum <= 16) {
-    return "Invalid: Sum of all digits must be greater than 16";
-  }
-  return "Valid credit card number";
+9;
+function getOrdinal(number) {
+  if (typeof number !== "number" || isNaN(number)) return null;
+  const suffixes = ["th", "st", "nd", "rd"];
+  const value = number % 100;
+  return (
+    number + (suffixes[(value - 20) % 10] || suffixes[value] || suffixes[0])
+  );
 }
-module.exports = creditCard;
+describe("getOrdinal", () => {
+  test('returns "1st" for 1', () => {
+    expect(getOrdinal(1)).toBe("1st");
+  });
+  test('returns "2nd" for 2', () => {
+    expect(getOrdinal(2)).toBe("2nd");
+  });
+  test('return "5th" for 5', () => {
+    expect(getOrdinal(5)).toBe("5th");
+  });
+  test('return "5th" for 5', () => {
+    expect(getOrdinal(5)).toBe("5th");
+  });
+  test('return "11th" for 11', () => {
+    expect(getOrdinal(11)).toBe("11th");
+  });
+  test('return "21st" for 21', () => {
+    expect(getOrdinal(21)).toBe("21st");
+  });
+  test('return "42th" for 42', () => {
+    expect(getOrdinal(42)).toBe("42nd");
+  });
+});
